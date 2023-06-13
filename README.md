@@ -90,13 +90,29 @@ With a long title:
 <!-- USAGE -->
 ## Usage
 
-Start the application:
-```sh
-npm start
-```
-Open a web browser and navigate to http://localhost:34766 (change the port in accordance with your configuration file)
+1. Open VLC Media Player
 
-Other npm scripts:
+2. Enable the VLC plugin **(needs to be done manually each time you start VLC!)**:  
+![View > Now Playing in Texts v2](readme/vlc.png)
+
+3. Start the application:
+	```sh
+	cd vlc-now-playing-overlay/
+	npm start
+	```
+
+4. Play some music!
+
+5. Make sure the server is working: open a web browser and navigate to http://localhost:34766 (change the port in accordance with your configuration file)
+
+6. Add a browser source to your scene:
+	* Use the same URL as step 5, e.g. `http://localhost:34766`
+	* The widget's size is 480x100 pixels
+  
+	![OBS Browser Source Example](readme/obs.png)
+
+
+Other useful npm scripts:
 * `npm run watch`: watches for changes and restarts automatically, useful for development
 
 <p align="right">(<a href="#top">back to top</a>)</p>
