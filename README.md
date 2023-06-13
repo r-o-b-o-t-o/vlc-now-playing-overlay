@@ -38,10 +38,10 @@
 This project allows you to have a nice web-based display for your current track played in VLC. You can then add it to your stream scene with a browser capture.
 
 Example:  
-[Basic example](readme/screenshot-1.png)
+![Basic example](readme/screenshot-1.png)
 
 With a long title:  
-[Long title](readme/screenshot-2.gif)
+![Long title](readme/screenshot-2.gif)
 
 
 <!-- GETTING STARTED -->
