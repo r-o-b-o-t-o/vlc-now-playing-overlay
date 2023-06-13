@@ -1,0 +1,72 @@
+html,
+body {
+	background-color: transparent;
+	color: #f0f0f0;
+	font-family: "Noto Sans", sans-serif;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+#main {
+	width: 480px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	background-color: #303131d7;
+	text-align: right;
+}
+
+#main.empty {
+	display: none;
+}
+
+#left {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 0 12px;
+	min-width: 0;
+}
+
+#title {
+	font-weight: 600;
+	font-size: 26px;
+	margin-bottom: 2px;
+}
+
+#artist {
+	margin-top: 2px;
+	font-weight: 400;
+	font-size: 22px;
+}
+
+@keyframes marquee {
+	0%,
+	15% {
+		transform: translateX(0%);
+		left: 0%;
+	}
+
+	85%,
+	100% {
+		transform: translateX(-100%);
+		left: 100%;
+	}
+}
+
+#title,
+#artist {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#title .marquee,
+#artist .marquee {
+	display: inline-block;
+	position: relative;
+	animation: marquee 3s linear infinite alternate;
+}
+
+#artwork {
+	height: 100%;
+}
