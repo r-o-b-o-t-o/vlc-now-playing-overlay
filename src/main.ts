@@ -18,7 +18,11 @@ const getVlcFilePath = (name: string) => {
 
 const readTextFile = async (name: string) => {
 	const file = getVlcFilePath(name);
-	return (await fsx.readFile(file)).toString().trim();
+	try {
+		return (await fsx.readFile(file)).toString().trim();
+	} catch (err) {
+		return "";
+	}
 };
 
 const readTitle = async () => {
@@ -34,8 +38,12 @@ const readAlbum = async () => {
 };
 
 const readArtwork = async () => {
-	const file = path.join(expandVariables(config.vlcDataDir), "np_artwork.jpg");
-	return (await fsx.readFile(file)).toString("base64");
+	try {
+		const file = path.join(expandVariables(config.vlcDataDir), "np_artwork.jpg");
+		return (await fsx.readFile(file)).toString("base64");
+	} catch (err) {
+		return null;
+	}
 };
 
 const main = () => {
