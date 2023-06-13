@@ -39,7 +39,7 @@ const readAlbum = async () => {
 
 const readArtwork = async () => {
 	try {
-		const file = path.join(expandVariables(config.vlcDataDir), "np_artwork.jpg");
+		const file = getVlcFilePath("np_artwork.jpg");
 		return (await fsx.readFile(file)).toString("base64");
 	} catch (err) {
 		return null;
